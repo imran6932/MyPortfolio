@@ -561,3 +561,8 @@ hr {
   text-decoration: none;
   color: whitesmoke;
 }
+
+
+.navbar-toggler-icon {
+  filter: invert(1); /* Changes black to white */
+}
