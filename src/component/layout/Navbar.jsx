@@ -42,7 +42,6 @@ function Navbar() {
         <div
           className={`collapse navbar-collapse ${isDropdownOpen ? "show" : ""}`}
           id="navbarNav"
-          // onClick={(e) => e.stopPropagation()} // Prevents clicks inside from triggering the outside handler
         >
           <ul className="navbar-nav">
             <li className="nav-item">

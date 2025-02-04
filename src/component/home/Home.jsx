@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import Navbar from "../layout/Navbar";
-import ScrollToTop from "../layout/ScrollToTop";
+// import ScrollToTop from "../layout/ScrollToTop";
 
 function Home() {
   return (
     <>
       <Navbar></Navbar>
-      <ScrollToTop></ScrollToTop>
+      {/* <ScrollToTop></ScrollToTop> */}
       <div className="container-fluid home-container pb-4">
         <div className="row justify-content-evenly" id="home-content">
           <div className="col-sm-5" id="homecol1">

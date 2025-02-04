@@ -47,6 +47,10 @@ nav {
   transform: scale(1.1);
 }
 
+.navbar-toggler-icon {
+  filter: invert(1); /* Changes black to white */ !important
+}
+
 .home-container {
   margin-top: 50px;
   width: 100%;
@@ -563,6 +567,3 @@ hr {
 }
 
 
-.navbar-toggler-icon {
-  filter: invert(1); /* Changes black to white */
-}
