@@ -48,7 +48,7 @@ nav {
 }
 
 .navbar-toggler-icon {
-  filter: invert(1); /* Changes black to white */ !important
+  filter: invert(1); /* Changes black to white */
 }
 
 .home-container {
