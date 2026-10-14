@@ -1,38 +1,119 @@
-import ProjectNavbar from "../../layout/ProjectNavbar";
-import BackButton from "../../layout/BackButton";
-import ScrollToTop from "../../layout/ScrollToTop";
+import { Link } from 'react-router-dom';
+import Navbar from '../../layout/Navbar';
 
 const Shotlocker = () => {
+  const techStack = [
+    { name: "Django REST Framework", description: "RESTful APIs for user authentication, score entry, and data retrieval" },
+    { name: "Social Authentication", description: "Google and Apple social login integration for seamless user experience" },
+    { name: "MySQL Database", description: "Secure storage for user information, golf rounds, and subscription details" },
+    { name: "Stripe Integration", description: "Secure payment gateway for monthly and yearly subscriptions" },
+    { name: "Ubuntu Server", description: "Reliable and scalable Linux-based server hosting" },
+    { name: "Mobile-First Design", description: "Optimized mobile application for golf course use" }
+  ];
+
+  const features = [
+    {
+      title: "Social Authentication",
+      description: "Quick registration and login via Google or Apple accounts for seamless access",
+      icon: "🔐"
+    },
+    {
+      title: "Round Creation", 
+      description: "Create new rounds with course details, date, and number of holes",
+      icon: "⛳"
+    },
+    {
+      title: "Score Tracking",
+      description: "Hole-by-hole shot recording and performance tracking across rounds",
+      icon: "📊"
+    },
+    {
+      title: "Performance Analytics",
+      description: "Monitor progress over time with detailed scoring statistics",
+      icon: "📈"
+    },
+    {
+      title: "Subscription Management",
+      description: "Flexible monthly or yearly subscription plans with secure payments",
+      icon: "💳"
+    },
+    {
+      title: "Course Management",
+      description: "Track performance across different golf courses and locations",
+      icon: "🏌️"
+    }
+  ];
+
   return (
     <>
-      <ProjectNavbar></ProjectNavbar>
-      <ScrollToTop></ScrollToTop>
-      <div className="row justify-content-evenly main-project">
-        <div className="col-10">
-            <h2 className="project-header">Shotlocker : Golf Score Tracking System</h2>
-            <p className="mt-4 project-description">Shotlocker is a mobile application designed to help golfers track their scores and performance during rounds of golf. Users can easily create a round, enter scores for individual holes, and monitor their progress over time. Users can register or log in using Google or Apple social login options for a smooth, secure onboarding process. The backend is built using Django REST Framework, with MySQL as the database for reliable storage and retrieval of user data and golf scores.</p>
+      <Navbar />
+      <div className="project-page">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              {/* Back Button */}
+              <div className="mb-4">
+                <Link to="/" className="btn btn-outline-primary">
+                  ← Back to Home
+                </Link>
+              </div>
 
-            <h2 className="mt-4 project-header" >Technical Stack:</h2>
-            <ul className="mt-4 project-points">
-                <li>Django REST Framework (DRF) is used for the backend, enabling the development of RESTful APIs that handle user authentication, score entry, round creation, and data retrieval.</li>
-                <li>Integration of Google and Apple social login for a seamless user experience during registration and login.</li>
-                <li>MySQL is used as the database management system to store user information, golf rounds, scores, and subscription details.</li>
-                <li>Users can purchase monthly or yearly subscriptions via secure payment gateways, with subscription details managed in the MySQL database.</li>
-                <li>Payment Gateway : Stripe (handles secure subscription payments)</li>
-                <li>Ubuntu Server : Hosting the application on a reliable and scalable Linux-based server.</li>
-            </ul>
-            
-            <h2 className="mt-4 project-header" >Key Features:</h2>
-            <ul className="mt-4 project-points">
-                <li>Users can register or log in via Google or Apple accounts, providing a fast and secure authentication method.</li>
-                <li>Users can create a new round by specifying details like the course name, date, and number of holes.</li>
-                <li>For each hole in the round, users can enter their shots, keeping a hole-by-hole record of their performance. This allows users to track their scoring across different rounds and golf courses.</li>
-            </ul>
+              {/* Project Title */}
+              <div className="text-center mb-5">
+                <h1 className="project-main-title">Shotlocker</h1>
+                <p className="project-subtitle">Golf Score Tracking & Performance Analytics System</p>
+              </div>
+
+              {/* Project Overview */}
+              <div className="project-section">
+                <h2 className="section-title">Project Overview</h2>
+                <div className="content-card">
+                  <p className="project-description">
+                    Shotlocker is a comprehensive mobile application designed specifically for golfers 
+                    who want to track their performance and improve their game. The app provides an 
+                    intuitive platform for score tracking, round management, and performance analytics 
+                    across different golf courses and playing conditions.
+                  </p>
+                  <p className="project-description">
+                    With seamless social authentication through Google and Apple, users can quickly 
+                    get started and focus on their game. The subscription-based model ensures 
+                    sustainable service delivery while providing golfers with premium features for 
+                    detailed performance analysis and progress tracking.
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="project-section">
+                <h2 className="section-title">Key Features</h2>
+                <div className="features-grid">
+                  {features.map((feature, index) => (
+                    <div key={index} className="feature-card">
+                      <div className="feature-icon">{feature.icon}</div>
+                      <h3 className="feature-title">{feature.title}</h3>
+                      <p className="feature-description">{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Technical Stack */}
+              <div className="project-section">
+                <h2 className="section-title">Technical Stack</h2>
+                <div className="tech-grid">
+                  {techStack.map((tech, index) => (
+                    <div key={index} className="tech-card">
+                      <h3 className="tech-name">{tech.name}</h3>
+                      <p className="tech-description">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-    </div>
-    <BackButton></BackButton>
-    <hr></hr>
-      
+      </div>
     </>
   );
 };

@@ -1,99 +1,119 @@
-import ProjectNavbar from "../../layout/ProjectNavbar";
-import BackButton from "../../layout/BackButton";
-import ScrollToTop from "../../layout/ScrollToTop";
+import { Link } from 'react-router-dom';
+import Navbar from '../../layout/Navbar';
 
 const Leasing = () => {
+  const techStack = [
+    { name: "Django REST Framework", description: "API endpoints, user authentication" },
+    { name: "Scrapy", description: "Daily scraping of car leasing data from leasing.com" },
+    { name: "PostgreSQL", description: "Structured relational database for all data storage" },
+    { name: "Celery", description: "Automated task scheduling and email notifications" },
+    { name: "Redis", description: "Caching and message broker for background tasks" },
+    { name: "Ubuntu", description: "Cloud deployment and hosting infrastructure" }
+  ];
+
+  const features = [
+    {
+      title: "Real-time Price Tracking",
+      description: "Daily scraping ensures up-to-date pricing information is always available",
+      icon: "📊"
+    },
+    {
+      title: "Intelligent Watchlists", 
+      description: "Users can create personalized watchlists and track price movements",
+      icon: "👀"
+    },
+    {
+      title: "Advanced Analytics",
+      description: "Graphical visualizations for comparing cars and market trends",
+      icon: "📈"
+    },
+    {
+      title: "Smart Filtering",
+      description: "Filter and compare cars by terms, companies, and derivatives",
+      icon: "🔍"
+    },
+    {
+      title: "Automated Reports",
+      description: "Daily summary emails with market insights and alerts",
+      icon: "📧"
+    },
+    {
+      title: "Intuitive Dashboard",
+      description: "User-friendly interface for detailed analysis and management",
+      icon: "🎯"
+    }
+  ];
+
   return (
     <>
-      <ProjectNavbar></ProjectNavbar>
-      <ScrollToTop></ScrollToTop>
-      <div className="row justify-content-evenly main-project">
-          <div className="col-10">
-          <h2 className="project-header">
-            Leasing Scraper : Car Leasing Price Tracking Web App
-          </h2>
-          <p className="mt-4 project-description">
-            The Leasing Scraper is a powerful web application developed for a
-            client to monitor car leasing prices, both for their own fleet and
-            for their competitors. The app scrapes detailed data from
-            leasing.com on a daily basis, ensuring up-to-date pricing
-            information is available at all times. Users can create watchlists
-            of specific cars, track their price movements, and compare these
-            cars using graphical visualizations. Additionally, the platform
-            allows users to filter and compare cars based on leasing terms,
-            companies, derivatives, and other criteria. The app sends daily
-            summary emails and offers an intuitive dashboard for detailed
-            analysis. The backend is built using Django REST Framework, data is
-            scraped using Scrapy, and PostgreSQL is used for data storage, with
-            Celery scheduling the scraper and handling email notifications.
-          </p>
+      <Navbar />
+      <div className="project-page">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              {/* Back Button */}
+              <div className="mb-4">
+                <Link to="/" className="btn btn-outline-primary">
+                  ← Back to Home
+                </Link>
+              </div>
 
-          <h2 className="mt-4 project-header">Technical Stack:</h2>
-          <ul className="mt-4 project-points">
-            <li>
-              Backend : Django REST Framework (API endpoints, user
-              authentication).
-            </li>
-            <li>
-              Scrapy : Handles daily scraping of car leasing data from
-              leasing.com, ensuring up-to-date pricing and market trends.
-            </li>
-            <li>
-              PostgreSQL : Stores all car data, user information, watchlists,
-              and historical price data in a structured, relational database.
-            </li>
-            <li>
-              Scraping & Scheduling : Celery (automated daily scraping of
-              LinkedIn posts based on user-defined triggers).
-            </li>
-            <li>
-              Celery : Used to schedule the scraping tasks and send daily
-              summary emails to users after the scraping process is complete.
-            </li>
-            <li>
-              SMTP (Simple Mail Transfer Protocol) : Used for sending the daily
-              summary emails to users, informing them of updates in car leasing
-              data.
-            </li>
-            <li>
-              Ubuntu Server : Hosting the application on a reliable and scalable
-              Linux-based server.
-            </li>
-          </ul>
+              {/* Project Title */}
+              <div className="text-center mb-5">
+                <h1 className="project-main-title">Leasing Scraper</h1>
+                <p className="project-subtitle">Car Leasing Price Tracking Web Application</p>
+              </div>
 
-          <h2 className="mt-4 project-header">Key Features:</h2>
-          <ul className="mt-4 project-points">
-            <li>
-              After the scraping process is completed, the system sends a daily
-              summary email to the users, providing an overview of price
-              changes, new cars added to the market, and other relevant updates.
-              This helps the client stay informed without having to log in to
-              the app every day.
-            </li>
-            <li>
-              The web app allows users to filter cars based on specific criteria
-              such as leasing term, company, derivatives, and more.
-            </li>
-            <li>
-              This feature enables in-depth comparison of car listings, helping
-              users analyze their fleet against competitors’ offerings based on
-              a range of attributes.
-            </li>
-            <li>
-              Users can create custom watchlists where they can add specific
-              cars they want to monitor. This allows users to track the prices
-              of chosen vehicles over time.
-            </li>
-            <li>
-              Watchlists can be organized by different criteria such as car
-              models, companies, and leasing terms, giving users flexibility in
-              managing their focus cars.
-            </li>
-          </ul>
+              {/* Project Overview */}
+              <div className="project-section">
+                <h2 className="section-title">Project Overview</h2>
+                <div className="content-card">
+                  <p className="project-description">
+                    The Leasing Scraper is a comprehensive web application designed to revolutionize 
+                    car leasing price monitoring for businesses. Built for a client managing large 
+                    vehicle fleets, this platform provides real-time competitive intelligence by 
+                    automatically scraping and analyzing leasing data from major platforms daily.
+                  </p>
+                  <p className="project-description">
+                    The system enables users to track price movements, create intelligent watchlists, 
+                    and gain actionable insights through advanced analytics. With automated reporting 
+                    and an intuitive dashboard, businesses can make data-driven decisions about their 
+                    leasing strategies while staying ahead of market trends.
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="project-section">
+                <h2 className="section-title">Key Features</h2>
+                <div className="features-grid">
+                  {features.map((feature, index) => (
+                    <div key={index} className="feature-card">
+                      <div className="feature-icon">{feature.icon}</div>
+                      <h3 className="feature-title">{feature.title}</h3>
+                      <p className="feature-description">{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Technical Stack */}
+              <div className="project-section">
+                <h2 className="section-title">Technical Stack</h2>
+                <div className="tech-grid">
+                  {techStack.map((tech, index) => (
+                    <div key={index} className="tech-card">
+                      <h3 className="tech-name">{tech.name}</h3>
+                      <p className="tech-description">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
-      <BackButton></BackButton>
-      <hr></hr>
     </>
   );
 };

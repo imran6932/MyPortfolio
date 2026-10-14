@@ -1,39 +1,119 @@
-import ProjectNavbar from "../../layout/ProjectNavbar";
-import BackButton from "../../layout/BackButton";
-import ScrollToTop from "../../layout/ScrollToTop";
+import { Link } from 'react-router-dom';
+import Navbar from '../../layout/Navbar';
 
 const Nhai = () => {
+  const techStack = [
+    { name: "Django REST Framework", description: "Robust, scalable API for user authentication, project data, and reports" },
+    { name: "MySQL", description: "Relational database for project details, user information, roles, and reports" },
+    { name: "Celery", description: "Background task scheduling for automated report generation and reminders" },
+    { name: "Ubuntu Server", description: "Reliable and scalable Linux-based server hosting" },
+    { name: "JWT Authentication", description: "Secure user authentication and role-based access control" },
+    { name: "SMTP Integration", description: "Automated email delivery for reports and deadline reminders" }
+  ];
+
+  const features = [
+    {
+      title: "Role-Based Dashboards",
+      description: "Customized access for CALA, district collectors, commissioners, and principals",
+      icon: "👥"
+    },
+    {
+      title: "Real-time Project Tracking", 
+      description: "Live monitoring of project progress, financials, and milestones",
+      icon: "📊"
+    },
+    {
+      title: "Automated Monthly Reports",
+      description: "Automated report generation and email distribution to stakeholders",
+      icon: "📋"
+    },
+    {
+      title: "Smart Deadline Reminders",
+      description: "Daily email reminders for CALAs about upcoming project deadlines",
+      icon: "⏰"
+    },
+    {
+      title: "Progress Analytics",
+      description: "Comprehensive analytics and insights on project performance",
+      icon: "📈"
+    },
+    {
+      title: "Secure Access Control",
+      description: "JWT-based authentication with role-specific permissions",
+      icon: "🔐"
+    }
+  ];
+
   return (
     <>
-      <ProjectNavbar></ProjectNavbar>
-      <ScrollToTop></ScrollToTop>
-      <div className="row justify-content-evenly main-project" >
-        <div className="col-10">
-            <h2 className="project-header">NHAI : Project Tracking Web App</h2>
-            <p className="mt-4 project-description">The NHAI web app is designed to track and manage road projects across Maharashtra, providing role-based dashboards for key stakeholders like CALA, district collectors, commissioners, and principals. Each user role has access to relevant project data, with automated monthly progress reports and daily deadline reminders sent via email. The backend is built with Django REST Framework, using MySQL for data storage, and deployed on an Ubuntu server. Celery is used to schedule background tasks like report generation and email notifications.</p>
-            <h2 className="mt-4 project-header" >Technical Stack:</h2>
-            <ul className="mt-4 project-points">
-                <li>Django REST Framework : For building a robust, scalable API to manage user authentication, project data, and reports.</li>
-                <li>MySQL : A relational database used to store project details, user information, roles, and reports.</li>
-                <li>Celery : Used for scheduling and running background tasks like automated report generation and deadline reminders.</li>
-                <li>Scraping & Scheduling : Celery (automated daily scraping of LinkedIn posts based on user-defined triggers)</li>
-                <li>Ubuntu Server : Hosting the application on a reliable and scalable Linux-based server.</li>
-                <li>JWT (JSON Web Tokens) : For secure user authentication and role-based access control.</li>
-                <li>SMTP : For sending automated emails (progress reports, deadline reminders) to users.</li>
-            </ul>
-            <h2 className="mt-4 project-header" >Key Features:</h2>
-            <ul className="mt-4 project-points">
-                <li>Role-Based Dashboards : Customized access for CALA, district collectors, commissioners, and principals.</li>
-                <li>Project Tracking : Real-time monitoring of project progress, financials, and milestones.</li>
-                <li>Monthly Reports : Automated report generation and email distribution to stakeholders.</li>
-                <li>Deadline Reminders : Daily email reminders for CALAs about upcoming project deadlines.</li>
-                <li>Email Notifications : Daily summaries of triggered posts sent via email.</li>
-            </ul>
+      <Navbar />
+      <div className="project-page">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              {/* Back Button */}
+              <div className="mb-4">
+                <Link to="/" className="btn btn-outline-primary">
+                  ← Back to Home
+                </Link>
+              </div>
+
+              {/* Project Title */}
+              <div className="text-center mb-5">
+                <h1 className="project-main-title">NHAI Project Tracker</h1>
+                <p className="project-subtitle">Road Project Tracking Web Application for Maharashtra</p>
+              </div>
+
+              {/* Project Overview */}
+              <div className="project-section">
+                <h2 className="section-title">Project Overview</h2>
+                <div className="content-card">
+                  <p className="project-description">
+                    The NHAI Project Tracker is a comprehensive web application designed to streamline 
+                    the tracking and management of road projects across Maharashtra. This government 
+                    solution provides role-based dashboards for key stakeholders including CALA officers, 
+                    district collectors, commissioners, and principals.
+                  </p>
+                  <p className="project-description">
+                    Each user role has tailored access to relevant project data, with automated monthly 
+                    progress reports and daily deadline reminders delivered via email. The system ensures 
+                    transparency, accountability, and efficient project management across the entire 
+                    highway development network.
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              <div className="project-section">
+                <h2 className="section-title">Key Features</h2>
+                <div className="features-grid">
+                  {features.map((feature, index) => (
+                    <div key={index} className="feature-card">
+                      <div className="feature-icon">{feature.icon}</div>
+                      <h3 className="feature-title">{feature.title}</h3>
+                      <p className="feature-description">{feature.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Technical Stack */}
+              <div className="project-section">
+                <h2 className="section-title">Technical Stack</h2>
+                <div className="tech-grid">
+                  {techStack.map((tech, index) => (
+                    <div key={index} className="tech-card">
+                      <h3 className="tech-name">{tech.name}</h3>
+                      <p className="tech-description">{tech.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-    </div>
-    <BackButton></BackButton>
-    <hr></hr>
-      
+      </div>
     </>
   );
 };
