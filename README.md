@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Imran Ansari — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website showcasing my experience, technical skills, and software development projects.
 
-## Available Scripts
+🌐 **Live Website:** [imranansari.in](https://imranansari.in/)
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+I'm a software engineer focused on Python backend development, REST API design, databases, deployment, and AI-powered applications. This portfolio brings together selected projects, technical skills, and professional experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Featured Projects
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### SmartDoc — AI Document Assistant
+An AI-powered document assistant that uses Retrieval-Augmented Generation (RAG) to answer questions about uploaded documents.
 
-### `npm test`
+- **Technologies:** Python, FastAPI, LangChain, OpenAI API, FAISS, React, Redis, Docker
+- **Repository:** [SmartDoc](https://github.com/imran6932/SmartDoc)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### FreeTalk — AI Companion Chatbot
+A conversational AI application using the Groq API, with multilingual conversations, a companion persona, persistent chat history, and an administration dashboard.
 
-### `npm run build`
+- **Technologies:** Python, FastAPI, Groq API, React, Redis, Docker
+- **Repository:** [FreeTalk](https://github.com/imran6932/FreeTalk)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### FastMart — Grocery Delivery Platform
+A full-stack grocery delivery platform with customer, rider, and admin interfaces, online payments, geospatial serviceability, and real-time rider tracking.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Technologies:** Python, Django REST Framework, PostgreSQL, PostGIS, Redis, Celery, Django Channels, React, Docker
+- **Repository:** [FastMart](https://github.com/imran6932/FastMart)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technical Skills
 
-### `npm run eject`
+- **Backend:** Python, Django, Django REST Framework, FastAPI, REST APIs
+- **Databases:** PostgreSQL, MySQL, MongoDB
+- **AI & LLM Applications:** Generative AI, OpenAI API, Groq API, LangChain, RAG, FAISS
+- **Infrastructure:** AWS, Docker, Linux, Nginx, Git
+- **Frontend:** React, JavaScript, HTML, CSS
+- **Tools & Integrations:** Postman, Razorpay, Stripe
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Running Locally
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+These instructions assume the project uses a typical React/Vite setup. Check the repository's `package.json` for the exact package manager and scripts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/imran6932/my-portfolio.git
+   cd my-portfolio
+   ```
 
-## Learn More
+2. Install dependencies using the package manager configured by the repository. For npm:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Start the development server:
 
-### Code Splitting
+   ```bash
+   npm run dev
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Create a production build:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+The portfolio is hosted at [imranansari.in](https://imranansari.in/). The repository uses a deployment workflow that connects to the server over SSH and updates the application from the `main` branch.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contact
 
-### Advanced Configuration
+- **Portfolio:** [imranansari.in](https://imranansari.in/)
+- **GitHub:** [github.com/imran6932](https://github.com/imran6932)
+- **Email:** imransxcr53@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here:- [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built by Imran Ansari.

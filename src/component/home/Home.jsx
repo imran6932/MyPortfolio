@@ -182,17 +182,55 @@ const experiences = [
               <p className="hero-tagline">
                 Python Backend & Full Stack Developer with nearly 4 years of professional experience building and deploying web applications and APIs with Django, Django REST Framework, and FastAPI. Skilled in PostgreSQL, Redis, Celery, Docker, and AWS, with a focus on database optimization and reliable, production-ready deployments. Recently expanded into GenAI and full-stack development, building RAG-based document Q&A and conversational AI applications with LangChain, OpenAI, and FAISS, alongside React frontends. Passionate about shipping fast, dependable software that people actually enjoy using.
               </p>
+              
               <div className="hero-cta-group">
-                <a href="mailto:imransxcr53@gmail.com" className="modern-btn btn-primary">
+                <a
+                  href="mailto:imransxcr53@gmail.com"
+                  className="modern-btn btn-primary"
+                >
                   <span>Get In Touch</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="m9 18 6-6-6-6"/>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="m9 18 6-6-6-6" />
                   </svg>
                 </a>
-                <button onClick={scrollToProjects} className="modern-btn btn-secondary">
+
+                <button
+                  onClick={scrollToProjects}
+                  className="modern-btn btn-primary"
+                >
                   <span>View Projects</span>
                 </button>
+
+                <a
+                  href="/Imran_Ansari_Resume.pdf"
+                  className="modern-btn btn-primary"
+                  download="Imran_Ansari_Resume.pdf"
+                >
+                  <span>Download Resume</span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <path d="m7 10 5 5 5-5" />
+                    <path d="M12 15V3" />
+                  </svg>
+                </a>
               </div>
+
             </div>
             <div className={`col-lg-6 text-center ${isVisible ? 'fade-in-up animate-delay-200' : ''}`}>
               <div className="profile-wrapper">
