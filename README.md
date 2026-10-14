@@ -44,7 +44,7 @@ These instructions assume the project uses a typical React/Vite setup. Check the
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/imran6932/my-portfolio.git
+   git clone https://github.com/imran6932/MyPortfolio.git
    cd my-portfolio
    ```
 
